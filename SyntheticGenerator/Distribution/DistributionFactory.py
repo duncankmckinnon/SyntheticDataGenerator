@@ -38,3 +38,7 @@ class DistributionFactory:
         else:
             raise AttributeError('distribution is not valid (must be one of [custom, uniform, normal, power, exponential, laplace])')
         return distribution_class
+    def __str__(self):
+        return 'DistributionFactory()'
+    def __rep__(self):
+        return self.__str__()
