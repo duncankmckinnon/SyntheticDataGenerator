@@ -10,9 +10,7 @@ class AttributeFactory:
     - string
     - int or int64
     - float or float64
-    
-    Properties:
-        - central_distribution_factory (DistributionFactory) - a DistributionFactory
+
     Implements:
         - create(name -> str, dtype -> str) --> Attribute()
     Raises:
