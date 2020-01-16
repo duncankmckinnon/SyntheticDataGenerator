@@ -26,8 +26,10 @@ class DataSynthesizer:
         of attributes from a list, DataFrame, or dict of attribute properties
         
         Parameters:
-            - items (list|dict|DataFrame) - either a list of attribute properties dictionairies, or a dictionary of { name : attribute } pairs 
-                (e.g. [{ name : str, drange : [] ... }] or { name : { drange : [] ...}, }
+            - items (list|dict|DataFrame) - either a list of dictionaries [attribute, ], 
+              or a dictionary of { index : attribute, } pairs 
+                (e.g. [{ name, drange, dtype, distribution, sparsity, kwargs },...] or 
+                { index : { name , drange, dtype, distribution, sparsity, kwargs },...})
             - rows (int) - number of rows
         Returns:
             - DataFrame - the synthetic dataset with specified attribute properties and rows
