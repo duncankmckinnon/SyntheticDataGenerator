@@ -1,6 +1,29 @@
 from Distribution import Distribution
 class DistributionFactory:
+    """
+    Class to generate and deploy specific distributions 
+    (UniformDistribution, NormalDistribution, 
+    PowerLawDistribution, ExponentialDistribution)
+    
+    Implements:
+        - create(distribution -> str) --> Distribution()
+    """
     def create(self, distribution, weights = None):
+        """
+        Create a Distribution object where distribution is one of
+        - custom
+        - uniform
+        - normal
+        - power
+        - exponential
+        - laplace
+        
+        Parameters:
+            - distribution (str) - one of [custom, uniform, normal, power, exponential, laplace]
+            - weights? (list) - a set of weights for each value in the attribute range (only custom distribution)
+        Raises:
+            - AttributeError - distribution out of range
+        """
         distribution_class = None
         if distribution == 'custom':
             distribution_class = Distribution.Distribution(weights)
