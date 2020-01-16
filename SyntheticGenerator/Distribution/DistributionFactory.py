@@ -2,8 +2,6 @@ from Distribution import Distribution
 class DistributionFactory:
     """
     Class to generate and deploy specific distributions 
-    (UniformDistribution, NormalDistribution, 
-    PowerLawDistribution, ExponentialDistribution)
     
     Implements:
         - create(distribution -> str) --> Distribution()
