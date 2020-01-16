@@ -10,13 +10,12 @@ class Attribute:
     Properties:
         - name (str) - the attribute or column name
         - type (str) - the type of attribute (e.g. Custom, Boolean, etc.)
-        - distribution_factory (DistributionFactory) - to generate specific distribution and weights
         - drange (list) - the set of unique values in the attribute (e.g. [0,1] for boolean)
         - cardinality (0 < int) - the number of unique values in drange
         - length (0 < int) - the number of entries in the attribute
         - sparsity (0 <= float <= 1.0) - the percentage of missing data
         - weights (list) - the distribution of weights for each unique value, to use when choosing values
-        - values (list) - the actual values that make up the attribute
+        - values (list) - the unique values that make up the attribute
     Implements:
         - generate(length -> 0 < int, drange -> list, distribution -> str, sparsity -> 0 <= float <= 1, **kwargs -> dict) -> list
         - _weights_() --> { range : list, weights: list }
